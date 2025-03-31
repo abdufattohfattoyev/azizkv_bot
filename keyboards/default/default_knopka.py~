@@ -1,0 +1,29 @@
+from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
+
+def get_main_menu():
+    markup = ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
+    buttons = [
+        KeyboardButton("📽 Prezentatsiya"),
+        KeyboardButton("📑 Mustaqil ish"),
+        KeyboardButton("📜 Referat"),
+        KeyboardButton("📝 Esselar"),
+        KeyboardButton("🔠 Krossvord"),
+        KeyboardButton("📖 Glossariy"),
+        KeyboardButton("Boshqa xizmatlar")
+    ]
+    markup.add(*buttons)
+    return markup
+
+def get_back_menu():
+    markup = ReplyKeyboardMarkup(resize_keyboard=True)
+    markup.add(KeyboardButton("🏠 Asosiy menyuga qaytish"))
+    return markup
+
+def get_phone_menu():
+    markup = ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
+    markup.add(
+        KeyboardButton("📱 Telefon raqamni ulashish", request_contact=True),
+        KeyboardButton("⌨️ Qo'lda kiritish")
+    )
+    markup.add(KeyboardButton("🏠 Asosiy menyuga qaytish"))
+    return markup
