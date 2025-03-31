@@ -134,3 +134,5 @@ dmypy.json
 # database files
 *.db
 data/*.db
+
+# PyCharm helpers
